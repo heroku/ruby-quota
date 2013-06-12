@@ -350,7 +350,7 @@ rb_diskquota_get(VALUE dqb, struct dqblk * c_dqb)
   c_dqb->dqb_bhardlimit = GetMember("bhardlimit");
   c_dqb->dqb_bsoftlimit = GetMember("bsoftlimit");
 #if !defined(USE_LINUX_CURBLOCKS)
-  c_dqb->dqb_curspace   = GetMember("curspace");
+  c_dqb->dqb_curspace   = GetMember("curblocks");
 #else
   c_dqb->dqb_curblocks  = GetMember("curblocks");
 #endif
